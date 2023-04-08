@@ -1,0 +1,151 @@
+.headerContainer{
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    user-select: none;
+}
+.navToggle, .navClose{
+    display: none;
+}
+.navList{
+    display: flex;
+    list-style-type: none;
+    gap: 1.5rem;
+}
+.nav__link{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+.nav__link div{
+    width: 70px;
+    height: 2px;
+    background-color: transparent;
+    transition: 0.3s all ease;
+}
+.nav__link:hover div{
+    background-color: #dbc4a3;
+}
+.active-link div{
+    background-color: #9B876B;
+    transition: 0.3s all ease;
+    animation-name: navactive;
+    animation-duration: 0.3s;
+    animation-iteration-count: initial;
+}
+@keyframes navactive {
+    from {
+        margin-left: -20rem; }
+}
+
+@media screen and (max-width: 768px){
+        /* Código para icono hamburguesa */
+        .burger-menu {
+            height: 100%;
+            width: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 0.4rem;
+            cursor: pointer;
+        }
+        .burger-bar {
+            width: 2rem;
+            height: 0.1em;
+            background-color: rgb(0, 0, 0);
+            border-radius: 0.5em;
+        }
+        
+        .burger-bar.clicked:nth-child(1){
+            transform: rotate(45deg) translate(0.15em, .25em);
+            transition: ease-out 0.4s;
+        }
+        
+        .burger-bar.clicked:nth-child(2){
+            transform: scale(0.01);
+            transition: ease-out 0.4s;
+        }
+        
+        .burger-bar.clicked:nth-child(3){
+            transform: rotate(135deg) translate(-0.3em, 0.4em);
+            transition: ease-out 0.4s;
+        }
+        
+        /* unclicked */
+        .burger-bar.unclicked {
+            transform: rotate(0) translate(0);
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+        }
+    /* Termina css hamburguesa*/
+
+    .logo svg{
+        width: 35px;
+        margin-left: 0.3rem;
+    }
+    .headerContainer{
+        justify-content: space-between;
+        padding: 0.6rem;
+    }
+    .navMenu{
+        z-index: 1;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        border-radius: 8px;
+        position: fixed;
+        background-color: #f7f7f7;
+        box-shadow: 1px 2px 8px rgb(75, 74, 74);
+        right: -200px;
+        transition: .3s
+    }
+    .showMenu{
+        right: 0;
+    }
+    .navList{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5px;
+        text-align: end;
+    }
+    .nav__link{
+        font-size: 15px;
+        transition: 0.3s;
+        padding: 0.5rem;
+    }
+    .navItem{
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+    .navItem:hover{
+        background-color: #ffffff;
+
+    }
+    .navToggle, .navClose {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .navToggle{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 2.2rem 1rem;
+    }
+    .navClose{
+        position: absolute;
+        top: -1;
+        right: 0;
+    }
+    .nav__link div{
+        display: none;
+    }
+}
