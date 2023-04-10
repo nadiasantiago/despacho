@@ -1,5 +1,5 @@
 .headerContainer{
-    background-color: #ffffff;
+    background-color: #faf8f8;
     display: flex;
     width: 100%;
     padding: 1rem;
@@ -28,15 +28,18 @@
 }
 .nav__link div{
     width: 70px;
-    height: 2px;
+    height: 1.7px;
+    margin-top: 4px;
     background-color: transparent;
     transition: 0.3s all ease;
 }
 .nav__link:hover div{
     background-color: #dbc4a3;
+    margin-top: 4px;
 }
 .active-link div{
-    background-color: #9B876B;
+    margin-top: 4px;
+    background-color: #B47A1A;
     transition: 0.3s all ease;
     animation-name: navactive;
     animation-duration: 0.3s;
@@ -47,11 +50,12 @@
         margin-left: -20rem; }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 788px){
         /* Código para icono hamburguesa */
         .burger-menu {
             height: 100%;
             width: 2rem;
+            margin-top: 8px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -62,7 +66,7 @@
         .burger-bar {
             width: 2rem;
             height: 0.1em;
-            background-color: rgb(0, 0, 0);
+            background-color: #000000D9;
             border-radius: 0.5em;
         }
         
@@ -99,7 +103,7 @@
     .navMenu{
         z-index: 1;
         padding: 0.5rem;
-        margin: 0.5rem 0;
+        margin: 1rem 0;
         border-radius: 8px;
         position: fixed;
         background-color: #f7f7f7;
@@ -147,5 +151,31 @@
     }
     .nav__link div{
         display: none;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .headerContainer{
+        height: 80px;
+        padding: 0.5rem;
+    }
+    .logo svg{
+        width: 28px;
+        margin-left: 0.7rem;
+        margin-top: 6px;
+    }
+    .burger-menu {
+        height: 100%;
+        width: 2rem;
+    }
+    .burger-bar {
+        width: 1.8rem;
+        height: 0.1em;
+    }
+    .navToggle{
+        padding: 1.5rem;
+    }
+    .navMenu{
+        margin-top: 2rem;
     }
 }

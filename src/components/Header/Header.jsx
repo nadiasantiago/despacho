@@ -44,10 +44,10 @@ const Header = () => {
         setIsMenuClicked(!isMenuClicked)
     }
       
-    useEffect(() => {
+    /*useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, []);*/
 
 
 
