@@ -4,12 +4,12 @@
   box-sizing: border-box;
   font-family: 'Old Standard TT', serif;
   scroll-behavior: smooth;
-  
 }
+
 main{
   margin-top: 115px;
   width: 100%;
-  overflow-x: hidden;
+  
 }
 @media screen and (max-width: 550px){
   main{

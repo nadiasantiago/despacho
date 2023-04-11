@@ -66,7 +66,7 @@ const Header = () => {
                 <div className={Toggle ? "navMenu showMenu" : "navMenu"}>
                     <ul className="navList">
                         <li className="navItem">
-                            <a href="#nosotros" onClick={() => setActiveNav("#nosotros")} className={activeNav === "#nosotros" ? "nav__link active-link" : "nav__link"}>¿Quienes somos?<div></div></a>
+                            <a href="#quienes somos" onClick={() => setActiveNav("#nosotros")} className={activeNav === "#nosotros" ? "nav__link active-link" : "nav__link"}>¿Quienes somos?<div></div></a>
                         </li>
                         <li className="navItem">
                             <a href="#servicios" onClick={() => setActiveNav("#servicios")} className={activeNav === "#servicios" ? "nav__link active-link" : "nav__link"}>Servicios<div></div></a>

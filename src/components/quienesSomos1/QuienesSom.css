@@ -8,6 +8,9 @@
     background-position: center;
     margin-bottom: 200px;
 }
+.home{
+    overflow-x: hidden;
+}
 .quienesDiv{
     width: 100%;
     height: 70vh;
@@ -38,6 +41,15 @@
     height: 17px;
     background-color: #B47A1A;
 }
+
+@media screen and (min-width: 990px){
+    .quienesTitle h1{
+        font-weight: lighter;
+        width: 300px;
+        font-size: 45px;
+    }
+}
+
 @media screen and (max-width: 700px){
     .quienes1Container{
         height: 60vh;
@@ -74,5 +86,84 @@
     }
     .separador{
         display: none;
+    }
+}
+
+/****** QUIENES SOMOS ********/
+
+.quienesContainer{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 0.45fr 2px 0.5fr;
+    align-items: center;
+    height: 20rem;
+    padding: 3rem;
+    width: 100%;
+}
+
+.separador2{
+    height: 100%;
+    width: 1px;
+    background-color: #B47A1A;
+    margin: auto;
+}
+.quienesTitle2{
+    justify-self: center;
+    padding-left: 1.8rem;
+}
+.quienesTexto{
+    padding: 1rem 0 0 3rem;
+}
+.quienesTexto p{
+    font-size: 20px;
+}
+.quienesTitle2 h2{
+    color: #B47A1A;
+    font-size: 30px;
+    font-weight: lighter;
+}
+.quienesTitle2 h3{
+    font-size: 45px;
+    font-weight: lighter;
+}
+@media screen and (max-width: 788px){
+    .quienesContainer{
+        
+        display: grid;
+        grid-template-rows: 0.45fr 1.5px 0.5fr;
+        grid-template-columns: 1fr;
+        justify-items: start;
+        align-content: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        width: 100%;
+    }
+    .separador2{
+        width: 200px;
+        background-color: #B47A1A;
+        display: none;
+    }
+    .sep{
+        width: 150%;
+        height: 1.5px;
+        background-color: #B47A1A;
+        margin: 0.5rem 0 2rem 0;
+    }
+    .quienesTitle2{
+        padding-left: 0rem;
+        justify-self: start;
+    }
+    .quienesTexto{
+        padding: 0;
+        margin: 5rem 0rem 0 0;
+    }
+    .quienesTexto p{
+        font-size: 16px;
+    }
+    .quienesTitle2 h2{
+        font-size: 20px;
+    }
+    .quienesTitle2 h3{
+        font-size: 25px;
     }
 }
