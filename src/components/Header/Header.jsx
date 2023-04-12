@@ -1,6 +1,6 @@
 import "./header.css"
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Header = () => {
     const [Toggle, showMenu] = useState(false);
@@ -43,7 +43,7 @@ const Header = () => {
         }
         setIsMenuClicked(!isMenuClicked)
     }
-      
+
     /*useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
@@ -66,19 +66,19 @@ const Header = () => {
                 <div className={Toggle ? "navMenu showMenu" : "navMenu"}>
                     <ul className="navList">
                         <li className="navItem">
-                            <a href="#quienes somos" onClick={() => setActiveNav("#nosotros")} className={activeNav === "#nosotros" ? "nav__link active-link" : "nav__link"}>¿Quienes somos?<div></div></a>
+                            <a href="#quienes somos" onClick={() => {setActiveNav("#nosotros"); updateMenu()}} className={activeNav === "#nosotros" ? "nav__link active-link" : "nav__link"}>¿Quienes somos?<div></div></a>
                         </li>
                         <li className="navItem">
-                            <a href="#servicios" onClick={() => setActiveNav("#servicios")} className={activeNav === "#servicios" ? "nav__link active-link" : "nav__link"}>Servicios<div></div></a>
+                            <a href="#servicios" onClick={() => {setActiveNav("#servicios"); updateMenu()}} className={activeNav === "#servicios" ? "nav__link active-link" : "nav__link"}>Servicios<div></div></a>
                         </li>
                         <li className="navItem">
-                            <a href="#profesionales" onClick={() => setActiveNav("#profesionales")} className={activeNav === "#profesionales" ? "nav__link active-link" : "nav__link"}>Profesionales<div></div></a>
+                            <a href="#profesionales" onClick={() => {setActiveNav("#profesionales"); updateMenu()}} className={activeNav === "#profesionales" ? "nav__link active-link" : "nav__link"}>Profesionales<div></div></a>
                         </li>
                         <li className="navItem">
-                            <a href="#contacto" onClick={() => setActiveNav("#contacto")} className={activeNav === "#contacto" ? "nav__link active-link" : "nav__link"}>Contacto<div></div></a>
+                            <a href="#contacto" onClick={() => {setActiveNav("#contacto"); updateMenu()}} className={activeNav === "#contacto" ? "nav__link active-link" : "nav__link"}>Contacto<div></div></a>
                         </li>
                         <li className="navItem">
-                            <a href="#drag" onClick={() => setActiveNav("#drag")} className={activeNav === "#drag" ? "nav__link active-link" : "nav__link"}>Trabaja con nosotros<div></div></a>
+                            <a href="#drag" onClick={() => {setActiveNav("#drag"); updateMenu()}} className={activeNav === "#drag" ? "nav__link active-link" : "nav__link"}>Trabaja con nosotros<div></div></a>
                         </li>
                     </ul>
                 </div>

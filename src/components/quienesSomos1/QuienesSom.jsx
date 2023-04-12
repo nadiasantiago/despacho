@@ -1,6 +1,10 @@
 import React from "react";
 import "./QuienesSom.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
 const QuienesSom = () =>{
+    AOS.init();
     return(
         <div className="quienes1Container">
             <div className="home">
@@ -12,13 +16,13 @@ const QuienesSom = () =>{
                 <div className="separador" />
             </div>
             <div className="quienesContainer" id="quienes somos">
-                <div className="quienesTitle2">
+                <div data-aos="fade-up" className="quienesTitle2">
                     <h2>S&J Despacho Jurídico</h2>
                     <h3>¿Quiénes somos?</h3>
                     <div className="sep animate__animated animate__fadeInLeftBig"></div>
                 </div>
-                <div className="separador2 animate__animated animate__flipInX" />
-                <div className="quienesTexto">
+                <div className="separador2" />
+                <div data-aos="fade-down" className="quienesTexto">
                     <p>
                         S&J es un Despacho Jurídico familiar con sede en Costa Rica y en Madrid, España. 
                         Se caracteriza por brindar servicios hace más de 45 años sosteniendo como pilares 
