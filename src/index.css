@@ -5,15 +5,20 @@
   font-family: 'Old Standard TT', serif;
   scroll-behavior: smooth;
 }
-
 main{
   margin-top: 115px;
   width: 100%;
-  
 }
 @media screen and (max-width: 550px){
   main{
     margin-top: 80px;
   }
+}
+
+:root{
+  --background: #FFFFFF;
+  --primary: #B47A1A;
+  --secondary: #692020;
+  --third: #3D0C0C;
 }
 
