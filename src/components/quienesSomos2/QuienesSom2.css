@@ -1,7 +1,6 @@
 .quienes2Conteiner{
     display: flex;
     flex-direction: row;
-    position: relative;
 }
 
 .visionConteiner{
