@@ -1,0 +1,71 @@
+.quienes2Conteiner{
+    display: flex;
+    flex-direction: row;
+}
+
+.visionConteiner{
+    position: absolute;
+    width: 50vw;
+    left: 0px;
+    top: 550px;
+    background: #692020;
+}
+
+/* Visión */
+.visionConteiner h2{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+
+    color: #FFFFFF;
+
+}
+
+.visionConteiner p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.83px;
+    margin: 25px 20px 18px 16px;    
+    color: #FFFFFF;
+
+}
+
+.misionConteiner{
+    position: absolute;
+    width: 50vw;
+    left: 180px;
+    top: 550px;
+    background: #3D0C0C;
+}
+
+.misionConteiner h2{
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    justify-content: center;
+        
+    color: #FFFFFF;
+}
+
+.misionConteiner p{
+    margin: 25px 24px 33px 17px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.83px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+}
+.logo2{
+    position: absolute;
+    z-index: 1;
+    width: 103.28px;
+    height: 211px;
+    left: 104.28px;
+    top: 565px;
+}
