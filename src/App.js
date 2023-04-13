@@ -7,12 +7,12 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <div>
+        <>
           <QuienesSom />
-        </div>
-        <div>
           <QuienesSom2 />
-        </div>
+        </>
+        {/* <>
+        </> */}
       </main>
     </div>
   );
