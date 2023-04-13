@@ -1,6 +1,7 @@
 .quienes2Conteiner{
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 .visionConteiner{
@@ -58,10 +59,15 @@
 
 }
 .logo2{
-    position: absolute;
     z-index: 1;
-    width: 103.28px;
-    height: 211px;
-    left: 104.28px;
-    top: 565px;
+}
+.logo2 svg{
+    display: block;
+    height: 100%;
+    transform: translate(100%)
+}
+
+
+@media screen and (min-width:768px){
+    
 }
