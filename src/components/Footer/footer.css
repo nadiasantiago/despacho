@@ -1,0 +1,130 @@
+.footer{
+    width: 100%;
+    padding: 2rem 0 1rem;
+    background-color: var(--third);
+    color: var(--primary);
+}
+
+.footerContainer1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+.logo2{
+    position: absolute;
+    bottom: 1;
+    left: 0;
+    z-index: 100;
+    margin-left: 20%;
+}
+.pagesFooter{
+    display: grid;
+    grid-template-columns: 1.7px 1fr;
+}
+.separadorFooter1{
+    height: 100%;
+    background-color: var(--primary);
+}
+.pagesList{
+    list-style: none;
+}
+.navFooter{
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+.ult{
+    margin-bottom: 0.5rem;
+}
+.navFooter a{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 16px;
+
+}
+.footerContainer2{
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.separadorFooter2{
+    background-color: var(--primary);
+    width: 50%;
+    height: 1.5px;
+}
+.copyright{
+    margin-top: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+    font-size: 16px;
+}
+.copyright svg{
+    width: 25px;
+}
+.contactoFooter h3{
+    font-size: 25px;
+}
+.redes{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.redes svg{
+    width: 30px;
+}
+
+
+@media screen and (max-width: 900px){
+    .logo2{
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 788px){
+    .footerContainer1{
+        gap: 2rem;
+        
+    }
+    .footer{
+        padding: 1rem;
+    }
+    .contactoFooter h3{
+        font-size: 20px;
+    }
+    .separadorFooter2{
+        width: 80%;
+    }
+    .redes{
+        gap: 5px;
+    }
+    .pagesFooter{
+        display: none;
+    }
+    .logo2{
+        margin-left: 0;
+        position: relative;
+    }
+    .logo2 svg{
+        width: 60px;
+        height: 130px;
+    }
+    .copyright{
+        width: 100%;
+        justify-content: center;
+    }
+    .copyright p{
+        font-size: 13px;
+    }
+    .footerContainer1{
+        padding: 0;
+    }
+    .footerContainer2{
+        margin-top: 0;
+    }
+}

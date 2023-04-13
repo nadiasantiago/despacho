@@ -128,26 +128,21 @@
 }
 @media screen and (max-width: 788px){
     .quienesContainer{
-        
-        display: grid;
-        grid-template-rows: 0.45fr 1.5px 0.5fr;
-        grid-template-columns: 1fr;
-        justify-items: start;
-        align-content: center;
-        gap: 1rem;
-        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 1.5rem 1rem;
         width: 100%;
     }
     .separador2{
-        width: 200px;
-        background-color: #B47A1A;
         display: none;
     }
     .sep{
-        width: 150%;
+        width: 120%;
         height: 1.5px;
         background-color: #B47A1A;
-        margin: 0.5rem 0 2rem 0;
+        margin: 0.5rem 0 1rem 0;
     }
     .quienesTitle2{
         padding-left: 0rem;
@@ -155,7 +150,7 @@
     }
     .quienesTexto{
         padding: 0;
-        margin: 5rem 0rem 0 0;
+        margin: 1.5rem 0 0 0;
     }
     .quienesTexto p{
         font-size: 16px;
