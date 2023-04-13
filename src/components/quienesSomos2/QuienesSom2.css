@@ -1,13 +1,13 @@
 .quienes2Conteiner{
     display: flex;
     flex-direction: row;
+
+    width: 100%;
 }
 
 .visionConteiner{
-    position: absolute;
     width: 50vw;
     left: 0px;
-    top: 550px;
     background: #692020;
 }
 
@@ -32,10 +32,8 @@
 }
 
 .misionConteiner{
-    position: absolute;
     width: 50vw;
-    left: 180px;
-    top: 550px;
+   
     background: #3D0C0C;
 }
 
