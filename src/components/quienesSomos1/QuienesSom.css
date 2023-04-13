@@ -6,7 +6,7 @@
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* margin-bottom: 200px; */
+    
 }
 .home{
     overflow-x: hidden;
@@ -153,12 +153,13 @@
         margin: 1.5rem 0 0 0;
     }
     .quienesTexto p{
-        font-size: 13px;
+        font-size: 12px;
+        line-height: 15px;
     }
     .quienesTitle2 h2{
-        font-size: 20px;
+        font-size: 16px;
     }
     .quienesTitle2 h3{
-        font-size: 25px;
+        font-size: 16px;
     }
 }
