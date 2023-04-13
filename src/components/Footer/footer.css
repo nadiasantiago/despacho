@@ -78,13 +78,12 @@
 .redes svg{
     width: 30px;
 }
-
-
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1200px){
     .logo3{
         margin-left: 5%;
     }
 }
+
 
 @media screen and (max-width: 788px){
     .footerContainer1{
