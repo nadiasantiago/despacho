@@ -1,8 +1,11 @@
-.quienes2Conteiner{
+ul{
+    list-style-type: none;
+}
+
+.misionVisionConteiner{
     display: flex;
     flex-direction: row;
     position: relative;
-    margin-bottom: 10rem;
 }
 
 .visionConteiner{
@@ -72,6 +75,44 @@
     transform: translate(-50%, -50%)
 }
 
+.valoresConteiner{
+    text-align: center;
+    margin: 36px 0;
+}
+.valoresConteiner h2{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000
+}
+.valoresConteiner h3{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B47A1A
+}
+.valoresItems{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 30px;
+}
+
+.item{
+    flex-direction: column;
+    margin: 15px;
+}
+.item li{
+    font-weight: 400;
+    font-size: 9.74285px;
+    line-height: 12px;
+}
+.item svg{
+    height: 57px;
+}
+
 
 @media screen and (min-width:768px){
     .visionConteiner{
@@ -100,6 +141,25 @@
         font-size: 30px;
         line-height: 37px;
     }
-        
-
+    .valoresConteiner{
+        margin: 152px 0px;
+    }
+    .valoresConteiner h2{
+        font-size: 50px;
+        line-height: 62px;
+    }
+    .valoresConteiner h3{
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .item{
+        margin: 50px 100px;
+    }
+    .item svg{
+        height: 200px;
+    }
+    .item li{
+        font-size: 30px;
+        line-height: 37px;
+    }
 }
