@@ -1,20 +1,24 @@
 .quienes2Conteiner{
     display: flex;
     flex-direction: row;
+    position: relative;
+    margin-bottom: 10rem;
 }
 
 .visionConteiner{
     width: 50vw;
     left: 0px;
     background: #692020;
+    padding: 8px;    
+
 }
 
 /* Visión */
 .visionConteiner h2{
     font-size: 14px;
+    line-height: 17px;
     display: flex;
     justify-content: center;
-    margin-top: 15px;
 
     color: #FFFFFF;
 
@@ -23,8 +27,8 @@
 .visionConteiner p{
     font-weight: 400;
     font-size: 12px;
-    line-height: 14.83px;
-    margin: 25px 20px 18px 16px;    
+    line-height: 15px;
+    margin-top: 12px;    
     color: #FFFFFF;
 
 }
@@ -33,10 +37,11 @@
     width: 50vw;
     left: 180px;
     background: #3D0C0C;
+    padding: 8px;
+
 }
 
 .misionConteiner h2{
-    margin-top: 15px;
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
@@ -47,26 +52,54 @@
 }
 
 .misionConteiner p{
-    margin: 25px 24px 33px 17px;
+    margin-top: 12px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 14.83px;
+    line-height: 15px;
     display: flex;
     align-items: center;
 
     color: #FFFFFF;
 
 }
+
 .logo2{
     z-index: 1;
-}
-.logo2 svg{
-    display: block;
     height: 100%;
-    transform: translate(100%)
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
 
 
 @media screen and (min-width:768px){
-    
+    .visionConteiner{
+        padding: 66px 51px 84px 110px;
+    }
+    .visionConteiner h2{
+        font-size: 50px;
+        line-height: 62px;
+        justify-content: start;
+    }
+    .visionConteiner p{
+        margin-top: 52px;    
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .misionConteiner{
+        padding: 66px 32px 47px 92px;
+    }
+    .misionConteiner h2{
+        font-size: 50px;
+        line-height: 62px;
+        justify-content: start;
+    }
+    .misionConteiner p{
+        margin-top: 52px;
+        font-size: 30px;
+        line-height: 37px;
+    }
+        
+
 }

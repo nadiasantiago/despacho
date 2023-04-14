@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Old Standard TT', serif;
+  font-style: normal;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
