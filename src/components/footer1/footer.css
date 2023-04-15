@@ -41,8 +41,11 @@
     color: var(--primary);
     font-weight: 700;
     font-size: 16px;
-
 }
+.navFooter a:hover{
+    opacity: 0.8;
+}
+
 .footerContainer2{
     margin-top: 1.5rem;
     width: 100%;
@@ -78,6 +81,10 @@
 .redes svg{
     width: 30px;
 }
+.icon svg:hover{
+    opacity: 0.8;
+}
+
 @media screen and (max-width: 1200px){
     .logo3{
         margin-left: 5%;
@@ -87,8 +94,7 @@
 
 @media screen and (max-width: 788px){
     .footerContainer1{
-        gap: 2rem;
-        
+        gap: 4.5rem;
     }
     .footer{
         padding: 1rem;
@@ -100,7 +106,7 @@
         width: 80%;
     }
     .redes{
-        gap: 5px;
+        gap: 9px;
     }
     .pagesFooter{
         display: none;

@@ -1,9 +1,11 @@
 import './App.css';
-import Header from './components/header/Header';
+import Header from './components/header1/Header';
 import QuienesSom from './components/quienesSomos1/QuienesSom';
 import QuienesSom2 from './components/quienesSomos2/QuienesSom2';
 
-import Footer from './components/footer/Footer';
+import Footer from './components/footer1/Footer';
+import Drag from './components/drag/Drag';
+
 function App() {
   return (
     <div className="App">
@@ -13,6 +15,9 @@ function App() {
         <>
           <QuienesSom />
           <QuienesSom2 />
+
+
+          <Drag />
         </>
         {/* <>
         </> */}
