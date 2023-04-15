@@ -1,4 +1,4 @@
-.dragContainer{margin-top: 2rem;
+.dragContainer{
     width: 100%;
     display: flex;
     flex-direction: column;

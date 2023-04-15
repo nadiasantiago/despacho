@@ -30,6 +30,7 @@
 
 .quienesTitle h1{
     font-weight: lighter;
+    font-size: 50px;
     width: 200px;
 }
 .buttonQuienes{
@@ -115,7 +116,7 @@
     padding: 1rem 0 0 3rem;
 }
 .quienesTexto p{
-    font-size: 20px;
+    font-size: 30px;
 }
 .quienesTitle2 h2{
     color: #B47A1A;
