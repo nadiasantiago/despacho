@@ -4,6 +4,7 @@ import QuienesSom from './components/quienesSomos1/QuienesSom';
 import QuienesSom2 from './components/quienesSomos2/QuienesSom2';
 import Drag from "./components/drag/Drag"
 import Footer from './components/footer1/Footer';
+import Servicios from './components/servicios/Servicios';
 function App() {
   return (
     <div className="App">
@@ -13,7 +14,7 @@ function App() {
         <>
           <QuienesSom />
           <QuienesSom2 />
-
+          <Servicios />
 
           <Drag />
         </>
