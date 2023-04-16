@@ -30,7 +30,7 @@
 
 .quienesTitle h1{
     font-weight: lighter;
-    font-size: 50px;
+    font-size: var(--title);
     width: 200px;
 }
 .buttonQuienes{
@@ -51,15 +51,17 @@
     }
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 989px){
     .quienes1Container{
         height: 60vh;
     }
     .quienesDiv{
         height: 60vh;
     }
+
     .quienesTitle h1{
-        font-size: 28px;
+        width: 200px;
+        font-size: 30px;
     }
 }
 @media screen and (max-width: 550px){
@@ -98,7 +100,7 @@
     grid-template-columns: 0.45fr 2px 0.5fr;
     align-items: center;
 
-    padding: 3rem;
+    padding: 5rem 2rem;
     width: 100%;
 }
 
@@ -116,7 +118,8 @@
     padding: 1rem 0 0 3rem;
 }
 .quienesTexto p{
-    font-size: 30px;
+    font-size: var(--text);
+    line-height: 30px;
 }
 .quienesTitle2 h2{
     color: #B47A1A;

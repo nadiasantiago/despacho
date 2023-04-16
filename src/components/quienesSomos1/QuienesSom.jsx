@@ -6,22 +6,19 @@ import "aos/dist/aos.css";
 const QuienesSom = () =>{
     AOS.init();
     return(
-        <>
-          <div className="quienes1Container">
+        <div id="quienes somos">
+          <div id="home" className="quienes1Container">
             <div className="home">
               <div className="quienesTitle animate__animated animate__fadeInLeft">
                 <h1 className="animate__animated animate__fadeIn">
                   Profesionalismo y compromiso
                 </h1>
-                <a href="" className="buttonQuienes">
-                  Conocenos
-                </a>
               </div>
               <div className="quienesDiv animate__animated animate__fadeInRightBig"></div>
               <div className="separador" />
             </div>
           </div>
-          <div className="quienesContainer" id="quienes somos">
+          <div className="quienesContainer" >
             <div data-aos="fade-up" className="quienesTitle2">
               <h2>S&J Despacho Jurídico</h2>
               <h3>¿Quiénes somos?</h3>
@@ -36,7 +33,7 @@ const QuienesSom = () =>{
               </p>
             </div>
           </div>
-        </>
+        </div>
       );
 }
 

@@ -9,21 +9,21 @@ const Header = () => {
 
     //Handle scroll para setear el componente activo al scrollear
     const handleScroll = () => {
-        const homePos = document.getElementById("nosotros").getBoundingClientRect();
+        const homePos = document.getElementById("quienes somos").getBoundingClientRect();
         const yoPos = document.getElementById("servicios").getBoundingClientRect();
-        const portfolioPos = document.getElementById("profesionales").getBoundingClientRect();
-        const contactoPos = document.getElementById("contacto").getBoundingClientRect();
+        //const portfolioPos = document.getElementById("profesionales").getBoundingClientRect();
+        //const contactoPos = document.getElementById("contacto").getBoundingClientRect();
         const dragPos = document.getElementById("drag").getBoundingClientRect();
         
         if (homePos.top < window.innerHeight / 2 && homePos.bottom > window.innerHeight / 2) {
-          setActiveNav("#nosotros");
+          setActiveNav("#quienes somos");
         } else if (yoPos.top < window.innerHeight / 2 && yoPos.bottom > window.innerHeight / 2) {
           setActiveNav("#servicios");
-        } else if (portfolioPos.top < window.innerHeight / 2 && portfolioPos.bottom > window.innerHeight / 2) {
+        } /*else if (portfolioPos.top < window.innerHeight / 2 && portfolioPos.bottom > window.innerHeight / 2) {
           setActiveNav("#profesionales");
         } else if (contactoPos.top < window.innerHeight / 2 && contactoPos.bottom > window.innerHeight / 2) {
           setActiveNav("#contacto");
-        }else if (dragPos.top < window.innerHeight / 2 && dragPos.bottom > window.innerHeight / 2) {
+        }*/else if (dragPos.top < window.innerHeight / 2 && dragPos.bottom > window.innerHeight / 2) {
             setActiveNav("#drag");
         }
     };
@@ -44,16 +44,16 @@ const Header = () => {
         setIsMenuClicked(!isMenuClicked)
     }
 
-    /*useEffect(() => {
+    useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);*/
+    }, []);
 
 
 
     return(
         <header className="headerContainer">
-            <a className = "logo" href="index.html">
+            <a className = "logo" href="#home">
                     <svg width="43" height="87" viewBox="0 0 86 174" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M67.1574 33.1658H71.0621C71.0886 33.4328 71.4499 36.4292 74.0854 37.6895C74.4556 37.8647 76.0334 38.6243 77.7786 38.0066C79.6385 37.3473 80.2907 35.6112 80.4053 35.3024C81.2074 33.1741 80.2201 30.5283 77.9461 28.6087H8.18972C5.87155 29.7187 4.64632 32.0056 5.11348 34.0755C5.62471 36.3541 7.97813 37.3306 8.1456 37.3973C8.55987 37.5559 10.2258 38.1569 12.0063 37.4391C13.7779 36.7296 14.9591 35.0019 15.0737 33.0155L18.5112 33.099C18.9343 36.4709 17.3037 39.751 14.3773 41.4286C10.9221 43.4067 6.25934 42.8141 3.24485 39.8929C2.83939 39.4923 -0.192682 36.4041 0.424319 31.9639C0.891477 28.5502 3.34184 25.6123 6.80586 24.2686H79.0831C82.9085 25.7876 85.4295 29.243 85.5088 33.0489C85.5793 36.763 83.314 40.8027 79.0831 42.1214C75.3899 43.2732 71.0445 42.0963 68.7528 39.1C66.9106 36.6963 67.0692 34.0171 67.1485 33.1741L67.1574 33.1658Z" fill="#B47A1A"/>
                     <path d="M62.1576 28.8477H57.2084V137.771V161.239L20.0346 125.351L15.9102 129.333L58.976 170.919L62.1576 174.001V28.8477Z" fill="#B47A1A"/>
@@ -66,7 +66,7 @@ const Header = () => {
                 <div className={Toggle ? "navMenu showMenu" : "navMenu"}>
                     <ul className="navList">
                         <li className="navItem">
-                            <a href="#quienes somos" onClick={() => {setActiveNav("#nosotros"); updateMenu()}} className={activeNav === "#nosotros" ? "nav__link active-link" : "nav__link"}>¿Quienes somos?<div></div></a>
+                            <a href="#quienes somos" onClick={() => {setActiveNav("#quienes somos"); updateMenu()}} className={activeNav === "#quienes somos" ? "nav__link active-link" : "nav__link"}>¿Quienes somos?<div></div></a>
                         </li>
                         <li className="navItem">
                             <a href="#servicios" onClick={() => {setActiveNav("#servicios"); updateMenu()}} className={activeNav === "#servicios" ? "nav__link active-link" : "nav__link"}>Servicios<div></div></a>

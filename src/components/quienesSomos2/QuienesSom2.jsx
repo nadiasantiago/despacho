@@ -119,13 +119,13 @@ const QuienesSom2=()=>{
             </svg>
             
             <div className="visionConteiner">
-                <h2>Visión</h2>
-                <p>Ser referentes en la prestación de servicios jurídicos, brindando un servicio integral y de excelencia al cliente, adaptándose e innovando para generar nuevas y mejores soluciones a sus problemas. <br></br>
+                <h2 data-aos="fade-right">Visión</h2>
+                <p data-aos="fade-right">Ser referentes en la prestación de servicios jurídicos, brindando un servicio integral y de excelencia al cliente, adaptándose e innovando para generar nuevas y mejores soluciones a sus problemas. <br></br>
                 Crear un lazo de confianza firme con las personas, haciendo de sus necesidades nuestra principal prioridad.</p>
             </div>
             <div className="misionConteiner">
-                <h2>Misión</h2>
-                <p>Nuestra misión es proporcionar una solución integral para sus necesidades legales, permitiéndole al cliente tomar decisiones informadas y enfrentar los desafíos que se le presenten con confianza. Ser una herramienta esencial, dinámica y comprometida como respuesta en el asesoramiento, representación, defensa y resolución en las diferentes áreas del Derecho.</p>
+                <h2 data-aos="fade-left">Misión</h2>
+                <p data-aos="fade-left">Nuestra misión es proporcionar una solución integral para sus necesidades legales, permitiéndole al cliente tomar decisiones informadas y enfrentar los desafíos que se le presenten con confianza. Ser una herramienta esencial, dinámica y comprometida como respuesta en el asesoramiento, representación, defensa y resolución en las diferentes áreas del Derecho.</p>
             </div>
         </div>
         <div className="valoresConteiner">

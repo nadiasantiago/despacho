@@ -6,6 +6,7 @@ ul{
     display: flex;
     flex-direction: row;
     position: relative;
+    overflow-x: hidden;
 }
 
 .visionConteiner{
@@ -29,7 +30,7 @@ ul{
 
 .visionConteiner p{
     font-weight: 400;
-    font-size: 12px;
+    font-size: var(--text-mobile);
     line-height: 15px;
     margin-top: 12px;    
     color: #FFFFFF;
@@ -57,7 +58,7 @@ ul{
 .misionConteiner p{
     margin-top: 12px;
     font-weight: 400;
-    font-size: 12px;
+    font-size: var(--text-mobile);
     line-height: 15px;
     display: flex;
     align-items: center;
@@ -114,38 +115,38 @@ ul{
 }
 
 
-@media screen and (min-width:768px){
+@media screen and (min-width:788px){
     .visionConteiner{
-        padding: 66px 51px 84px 110px;
+        padding: 66px 51px 84px 60px;
     }
     .visionConteiner h2{
-        font-size: 50px;
+        font-size: var(--title);
         line-height: 62px;
         justify-content: start;
     }
     .visionConteiner p{
         margin-top: 52px;    
-        font-size: 30px;
+        font-size: var(--text);
         line-height: 37px;
     }
     .misionConteiner{
-        padding: 66px 32px 47px 92px;
+        padding: 66px 32px 47px 72px;
     }
     .misionConteiner h2{
-        font-size: 50px;
+        font-size: var(--title);
         line-height: 62px;
         justify-content: start;
     }
     .misionConteiner p{
         margin-top: 52px;
-        font-size: 30px;
+        font-size: var(--text);
         line-height: 37px;
     }
     .valoresConteiner{
         margin: 152px 0px;
     }
     .valoresConteiner h2{
-        font-size: 50px;
+        font-size: var(--title);
         line-height: 62px;
     }
     .valoresConteiner h3{
@@ -156,10 +157,16 @@ ul{
         margin: 50px 100px;
     }
     .item svg{
-        height: 200px;
+        height: 180px;
     }
     .item li{
         font-size: 30px;
         line-height: 37px;
+    }
+}
+
+@media screen and (min-width: 930px) {
+    .visionConteiner{
+        padding: 66px 51px 84px 110px;
     }
 }
