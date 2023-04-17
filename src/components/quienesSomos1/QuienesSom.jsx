@@ -21,7 +21,7 @@ const QuienesSom = () =>{
           <div className="quienesContainer" >
             <div data-aos="fade-up" className="quienesTitle2">
               <h2>S&J Despacho Jurídico</h2>
-              <h3>¿Quiénes somos?</h3>
+              <h3 id="quienes somos1">¿Quiénes somos?</h3>
               <div className="sep animate__animated animate__fadeInLeftBig"></div>
             </div>
             <div className="separador2" />

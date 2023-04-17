@@ -82,13 +82,13 @@ ul{
 }
 .valoresConteiner h2{
     font-weight: 400;
-    font-size: 14px;
+    font-size: var(--title-mobile);
     line-height: 17px;
     color: #000000
 }
 .valoresConteiner h3{
     font-weight: 400;
-    font-size: 14px;
+    font-size: var(--title-mobile);
     line-height: 17px;
     color: #B47A1A
 }

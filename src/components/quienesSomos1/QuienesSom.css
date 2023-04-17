@@ -161,9 +161,9 @@
         line-height: 15px;
     }
     .quienesTitle2 h2{
-        font-size: 16px;
+        font-size: var(--title-mobile);
     }
     .quienesTitle2 h3{
-        font-size: 16px;
+        font-size: var(--title-mobile);
     }
 }

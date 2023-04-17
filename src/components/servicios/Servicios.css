@@ -4,7 +4,7 @@
 .serviciosTitle{
     text-align: center;
     font-weight: 400;
-    font-size: 14px;
+    font-size: var(--title-mobile);
     line-height: 17px;
     margin: 1.5em;
 }
@@ -47,7 +47,7 @@
 }
 .notarialesConteiner h3, .juridicosConteiner h3{
     font-weight: 700;
-    font-size: 9.8141px;
+    font-size: var(--text-mobile);
     line-height: 12px;
     z-index: 1;
     margin: 17px;
@@ -71,7 +71,7 @@
 .serviciosList{
     margin-bottom:9px ;
 }
-@media screen and (min-width:768px){
+@media screen and (min-width:788px){
     .serviciosTitle{
         font-size: 50px;
         line-height: 62px;

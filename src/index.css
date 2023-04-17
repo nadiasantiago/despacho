@@ -29,8 +29,11 @@ body{
   --primary: #B47A1A;
   --secondary: #692020;
   --third: #3D0C0C;
+
+  
   --text: 20px;
   --text-mobile: 12px;
   --title: 45px;
+  --title-mobile: 20px;
 }
 

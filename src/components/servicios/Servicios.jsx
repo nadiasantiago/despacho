@@ -33,7 +33,7 @@ const inmobiliaria =[
 const Servicios=()=>{
     return(
         <div id="servicios">
-            <h2 className="serviciosTitle">Servicios</h2>
+            <h2 id="servicios1" className="serviciosTitle">Servicios</h2>
             <div className="serviciosConteiner">
             <div className="notarialesConteiner">
                 <div className="blackBox"></div>

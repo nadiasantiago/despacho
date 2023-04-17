@@ -124,7 +124,7 @@ const Drag = () => {
     return (
         <>
         <div id="drag" className="dragContainer" data-aos="fade-up">
-            <h3>Trabaja con nosotros</h3>
+            <h3 id="drag1">Trabaja con nosotros</h3>
             <p>Dejanos tu curriculum y en breve nos pondremos en contacto contigo</p>
 
             <form ref={form} onDragLeave={handleDragLeave} onDragOver={handleDragOver} onDrop={handleDrop} onSubmit={sendEmail} className={class2} action="" >
