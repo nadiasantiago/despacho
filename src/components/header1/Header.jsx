@@ -1,7 +1,7 @@
 import "./header.css"
 import React from "react";
 import { useState, useEffect, useRef } from "react";
-
+import useTitle from "../../hooks/useTitle";
 const Header = () => {
     const [Toggle, showMenu] = useState(false);
     
@@ -48,7 +48,8 @@ const Header = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
+    
+    useTitle({title: activeNav})
 
 
     return(

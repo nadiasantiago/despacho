@@ -82,7 +82,7 @@ const Drag = () => {
           setFiles(null);
           
           // y lo envío por mail:
-          emailjs.send('service_v837z66', 'template_bkkbr1h', {file: response.data.link}, "vSSQ5-PdZnwQ58Aof").then((result) => toast.success('Formulario enviado con éxito!', {
+          emailjs.send('service_v837z66', 'template_bkkbr1h', {file: response.data.link}, "vSSQ5-PdZnwQ58Aof").then((result) => toast.success('Currículum enviado con éxito!', {
             position: "bottom-right",
             autoClose: 1500,
             hideProgressBar: false,
