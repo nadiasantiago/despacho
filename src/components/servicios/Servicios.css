@@ -56,17 +56,22 @@
     padding-top: 17px;
 }
 
-.serviciosItem, .serviciosList h4 {
+.serviciosItem,.serviciosText, .serviciosList h4 {
     font-weight: 400;
     font-size: 7.36058px;
     line-height: 9px;
 }
-.serviciosItem li:before {
+.notarialesItems li:before, .juridicosItems li::before {
     content: "-";
     margin-right: 5px;
 }
+
+.notarialesItems li:first-letter, .juridicosItems li:first-letter {
+    margin-left: -7.5px;
+}
 .serviciosItemsConteiner{
     z-index: 1;
+    margin: 5px;
 }
 .serviciosList{
     margin-bottom:9px ;
@@ -90,7 +95,10 @@
     .servicioSvg{
         width:30px;
     }
-    .serviciosItem, .serviciosList h4{
+    .serviciosTextCentrado{
+        text-align: center;
+    }
+    .serviciosItem,.serviciosText, .serviciosList h4{
         font-size: 30px;
         line-height: 37px;
     }
@@ -99,5 +107,8 @@
     }
     .juridicosConteiner{
         padding: 66px;
+    }
+    .notarialesItems li:first-letter, .juridicosItems li:first-letter {
+        margin-left: -16px;
     }
 }

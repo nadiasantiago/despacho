@@ -6,6 +6,7 @@ import Drag from "./components/drag/Drag"
 import Footer from './components/footer1/Footer';
 import Servicios from './components/servicios/Servicios';
 import Profesionales from './components/profesionales/Profesionales';
+import Contacto from './components/contacto/Contacto';
 
 
 function App() {
@@ -18,11 +19,9 @@ function App() {
           <QuienesSom />
           <QuienesSom2 />
           <Servicios />
-          <Profesionales/> 
+          <Profesionales/>
           <Drag />
         </>
-        {/* <>
-        </> */}
       </main>
 
       <Footer/>

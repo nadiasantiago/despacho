@@ -44,9 +44,8 @@ const Servicios=()=>{
                 <div className="serviciosItemsConteiner">
                 <ul className='notarialesItems'>
                     {notariales && notariales.map((e)=>{
-                        return (<div className="serviciosItem">
-                        <li key={e.servicio}>{e.servicio}</li>
-                        </div>
+                        return (
+                        <li className="serviciosItem" key={e.servicio}>{e.servicio}</li>
                         )
                     })}
                 </ul>
@@ -63,9 +62,8 @@ const Servicios=()=>{
                         <h4>Área Laboral</h4>
                         <ul className='juridicosItems'>
                             {laboral && laboral.map((e)=>{
-                                return (<div className="serviciosItem">
-                                <li key={e.servicio}>{e.servicio}</li>
-                                </div>
+                                return (
+                                <li className="serviciosItem" key={e.servicio}>{e.servicio}</li>
                                 )
                             })}
                         </ul>
@@ -74,9 +72,8 @@ const Servicios=()=>{
                         <h4>Área Bancario</h4>
                         <ul className='juridicosItems'>
                             {bancario && bancario.map((e)=>{
-                                return (<div className="serviciosItem">
-                                <li key={e.servicio}>{e.servicio}</li>
-                                </div>
+                                return (
+                                <li className="serviciosItem" key={e.servicio}>{e.servicio}</li>
                                 )
                             })}
                         </ul>
@@ -85,9 +82,8 @@ const Servicios=()=>{
                         <h4>Área de Extranjería</h4>
                         <ul className='juridicosItems'>
                             {extranjeria && extranjeria.map((e)=>{
-                                return (<div className="serviciosItem">
-                                <li key={e.servicio}>{e.servicio}</li>
-                                </div>
+                                return (
+                                <li className="serviciosItem" key={e.servicio}>{e.servicio}</li>
                                 )
                             })}
                         </ul>
@@ -96,16 +92,15 @@ const Servicios=()=>{
                         <h4>Área Inmobiliaria</h4>
                         <ul className='juridicosItems'>
                             {inmobiliaria && inmobiliaria.map((e)=>{
-                                return (<div className="serviciosItem">
-                                <li key={e.servicio}>{e.servicio}</li>
-                                </div>
+                                return (
+                                <li className="serviciosItem" key={e.servicio}>{e.servicio}</li>
                                 )
                             })}
                         </ul>
                     </div>
+                    <p className="serviciosText">¡y muchos más!</p>
+                    <p className="serviciosText serviciosTextCentrado">¡y muchos más!</p>
                 </div>
-
-
             </div>
         </div>
         </div>
