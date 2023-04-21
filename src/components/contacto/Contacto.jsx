@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import './Contacto.css';
 
-const mapKey = process.env.REACT_APP_API_KEY
+const mapKey = process.env.REACT_APP_API_KEY;
 
 const Contacto =()=>{
     const googleMapRef = useRef(null);
@@ -38,7 +38,7 @@ const Contacto =()=>{
         // Save the markers as refs for future use
         marker1Ref.current = marker1;
         marker2Ref.current = marker2;
-      };
+      }
     }, []);
   
     return (

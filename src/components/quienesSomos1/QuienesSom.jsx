@@ -26,9 +26,8 @@ const QuienesSom = () =>{
             </div>
             <div className="separador2" />
             <div data-aos="fade-down" className="quienesTexto">
-              <p>S&J es un Despacho Jurídico familiar con sede en Costa Rica y en Madrid, España. <br></br>
-              Se caracteriza por brindar servicios hace más de 45 años sosteniendo como pilares <br></br>
-              la empatía, el profesionalismo y la confianza de nuestros clientes. Lo conforman los profesionales,
+              <p>S&J es un Despacho Jurídico familiar con sede en Heredia, Costa Rica y en Madrid, España.
+              Se caracteriza por brindar servicios hace más de 45 años sosteniendo como pilares la empatía, el profesionalismo y la confianza de nuestros clientes. Lo conforman los profesionales,
               Braulio Enrique Sánchez González, Carolina Eugenia Sánchez Jiménez y Martín Jardón Canalías.
               </p>
             </div>

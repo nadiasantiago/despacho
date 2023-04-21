@@ -119,7 +119,7 @@
 }
 .quienesTexto p{
     font-size: var(--text);
-    line-height: 30px;
+    line-height: 35px;
 }
 .quienesTitle2 h2{
     color: #B47A1A;
@@ -158,7 +158,7 @@
     }
     .quienesTexto p{
         font-size: 12px;
-        line-height: 15px;
+        line-height: 17px;
     }
     .quienesTitle2 h2{
         font-size: var(--title-mobile);
