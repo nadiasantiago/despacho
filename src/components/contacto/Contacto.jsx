@@ -1,20 +1,18 @@
 import React, { useRef, useEffect } from "react";
 import './Contacto.css';
 
-const mapKey = process.env.REACT_APP_API_KEY
+const mapKey = process.env.REACT_APP_API_KEY;
 
 const Contacto =()=>{
     const googleMapRef = useRef(null);
     const marker1Ref = useRef(null);
     const marker2Ref = useRef(null);
-  
+
     useEffect(() => {
-      // Load the Google Maps API script
       const script = document.createElement("script");
       script.src = `https://maps.googleapis.com/maps/api/js?key=${mapKey}`;
       script.async = true;
       document.body.appendChild(script);
-  
       // Initialize the map and markers when the API is ready
       script.onload = () => {
         const google = window.google;
@@ -36,7 +34,7 @@ const Contacto =()=>{
         // Save the markers as refs for future use
         marker1Ref.current = marker1;
         marker2Ref.current = marker2;
-      };
+      }
     }, []);
   
     return (
