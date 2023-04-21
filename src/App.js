@@ -20,6 +20,7 @@ function App() {
           <QuienesSom2 />
           <Servicios />
           <Profesionales/>
+          <Contacto />
           <Drag />
         </>
       </main>

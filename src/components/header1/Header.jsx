@@ -1,6 +1,6 @@
 import "./header.css"
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import useTitle from "../../hooks/useTitle";
 const Header = () => {
     const [Toggle, showMenu] = useState(false);

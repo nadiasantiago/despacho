@@ -99,7 +99,6 @@ const Servicios=()=>{
                         </ul>
                     </div>
                     <p className="serviciosText">¡y muchos más!</p>
-                    <p className="serviciosText serviciosTextCentrado">¡y muchos más!</p>
                 </div>
             </div>
         </div>
