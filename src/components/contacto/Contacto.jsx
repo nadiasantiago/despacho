@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import './Contacto.css';
 
+const mapKey = process.env.REACT_APP_API_KEY
+
 const Contacto =()=>{
     const googleMapRef = useRef(null);
     const marker1Ref = useRef(null);
@@ -9,7 +11,7 @@ const Contacto =()=>{
     useEffect(() => {
       // Load the Google Maps API script
       const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCmO784HxiMJ5b0lH6qDH64cGn3wAzy5Xc`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${mapKey}`;
       script.async = true;
       document.body.appendChild(script);
   
@@ -40,6 +42,7 @@ const Contacto =()=>{
     return (
         <>
             <h2 className="contactoTitle">Contacto</h2>
+            <p>{mapKey}</p>
             <div className="contactoConteiner">
                 <div ref={googleMapRef} className="map" />
                 <div className="contactoInfo">
