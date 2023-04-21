@@ -10,8 +10,10 @@ const Contacto =()=>{
 
     useEffect(() => {
       const script = document.createElement("script");
+      script.defer=true;
       script.src = `https://maps.googleapis.com/maps/api/js?key=${mapKey}`;
       script.async = true;
+      
       document.body.appendChild(script);
       // Initialize the map and markers when the API is ready
       script.onload = () => {
