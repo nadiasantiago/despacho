@@ -10,6 +10,7 @@
     justify-content: center;
 }
 .map{
+    width: 90%;
     height: 400px;
     margin: 10px;
 }
@@ -20,7 +21,7 @@
     justify-content: center;
 }
 .contactoInfoDetail{
-    width: 35%;
+    width: 70%;
     margin: 5px;
 }
 .contactoInfoDetail h3{
@@ -35,7 +36,7 @@
 .redesConteiner{
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 70%;
     margin: 5px;
 }
 .redesConteiner svg{
