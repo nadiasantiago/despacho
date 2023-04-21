@@ -42,7 +42,6 @@ const Contacto =()=>{
     return (
         <>
             <h2 className="contactoTitle">Contacto</h2>
-            <p>{mapKey}</p>
             <div className="contactoConteiner">
                 <div ref={googleMapRef} className="map" />
                 <div className="contactoInfo">
