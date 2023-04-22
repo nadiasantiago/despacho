@@ -50,8 +50,71 @@
         margin-left: -20rem; }
 }
 
+/* NAV dropdown */
+.dropMobile{
+    display: none;
+}
+.navItem{
+    padding: 0.3rem;
+}
+.dropdownFalse{
+    display: none;
+}
+.dropdown{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    margin-top: 4.1rem;
+    margin-left: -8px;
+    animation-name: dropdownAnimation;
+    animation-duration: 0.3s;
+    animation-iteration-count: initial;
+    background-color: #fefefe;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    font-size: 15px;
+    box-shadow: 1px 2px 3px rgb(75, 74, 74);
+    border: 0.5px solid transparent;
+    transition: .3s ease;
+}
+.dropdown:hover{
+    border: 0.5px solid #B47A1A;
+}
+
+@keyframes dropdownAnimation {
+    from {
+        margin-top: 3.2rem;
+    }
+}
+
+
 @media screen and (max-width: 788px){
         /* Código para icono hamburguesa */
+        .dropMobile{
+            cursor: pointer;
+            margin: auto;
+            margin-top: 8px;
+            margin-bottom: 0;
+            width: 60%;
+            padding: 8px;
+            border: 0.3px solid rgba(126, 126, 126, 0.536);
+            border-radius: 8px;
+            background-color: #ffffff;
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            transition: .3s ease;
+        }
+        .dropMobile:active{
+            background-color: #ffffff;
+            border: 0.3px solid black;
+        }
+        .dropdown{
+            display: none;
+        }
         .burger-menu {
             height: 100%;
             width: 2rem;
@@ -126,6 +189,7 @@
         padding: 0.5rem;
     }
     .navItem{
+        text-align: center;
         padding: 0.5rem;
         border-radius: 8px;
     }
@@ -152,6 +216,8 @@
     .nav__link div{
         display: none;
     }
+
+
 }
 
 @media screen and (max-width: 550px){
@@ -177,5 +243,109 @@
     }
     .navMenu{
         margin-top: 2rem;
+    }
+}
+.overlay{
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    margin: auto;
+}
+
+.popupContainer{
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f7f7f7;
+    border-radius: 1rem;
+    width: 75%;
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 101;
+}
+.overlay i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    margin: 2rem 4rem;
+    border-radius: 1rem;
+    background-color: var(--third);
+    box-shadow: 1px 1px 5px rgb(185, 185, 185);
+    font-size: 40px;
+    cursor: pointer;
+    transition: .3s all ease;
+    color: white;
+}
+.overlay i:hover{
+    rotate: -20deg;
+}
+.popupList{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+}
+.popupItem{
+    margin: 0.5rem;
+    width: 40%;
+}
+.popupItem h2{
+    padding: 0.5rem;
+}
+
+.popupItem ul{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    gap: 0.5rem;
+}
+
+
+@media screen and (max-width: 788px) {
+        /* Popup */
+    .popupContainer{
+        margin: auto;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        background-color: #f7f7f7;
+        border-radius: 1rem;
+        width: 85%;
+        height: 500px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        z-index: 3;
+    }
+    .overlay i{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        margin: 1rem 0.5rem;
+        border-radius: 1rem;
+        background-color: var(--third);
+        box-shadow: 2px 2px 2px rgb(185, 185, 185);
+        font-size: 30px;
+        cursor: pointer;
+        transition: .3s all ease;
+        color: white;
+    }
+    .popupItem h2{
+        font-size: var(--title-mobile);
+    }
+    .popupItem ul li{
+        font-size: var(--text-mobile);
+    }
+    .popupItem{
+        margin: 0.5rem;
+        width: 80%;
     }
 }

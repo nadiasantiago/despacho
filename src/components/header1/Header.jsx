@@ -2,17 +2,22 @@ import "./header.css"
 import React from "react";
 import { useState, useEffect } from "react";
 import useTitle from "../../hooks/useTitle";
+import { Popup } from "./Popup";
+
+
 const Header = () => {
-    const [Toggle, showMenu] = useState(false);
     
+    const [Toggle, showMenu] = useState(false);
+    const [Dropdown, setDropdown] = useState(false);
     const [activeNav, setActiveNav] = useState(`#nosotros`);
+    const [openPopup, setOpenPopup] = useState(false)
 
     //Handle scroll para setear el componente activo al scrollear
     const handleScroll = () => {
         const homePos = document.getElementById("quienes somos").getBoundingClientRect();
         const yoPos = document.getElementById("servicios").getBoundingClientRect();
         const profPos = document.getElementById("profesionales").getBoundingClientRect();
-        //const contactoPos = document.getElementById("contacto").getBoundingClientRect();
+        const contactoPos = document.getElementById("contacto").getBoundingClientRect();
         const dragPos = document.getElementById("drag").getBoundingClientRect();
         
         if (homePos.top < window.innerHeight / 2 && homePos.bottom > window.innerHeight / 2) {
@@ -21,9 +26,9 @@ const Header = () => {
           setActiveNav("#servicios");
         } else if (profPos.top < window.innerHeight / 2 && profPos.bottom > window.innerHeight / 2) {
           setActiveNav("#profesionales");
-        } /*else if (contactoPos.top < window.innerHeight / 2 && contactoPos.bottom > window.innerHeight / 2) {
+        } else if (contactoPos.top < window.innerHeight / 2 && contactoPos.bottom > window.innerHeight / 2) {
           setActiveNav("#contacto");
-        }*/else if (dragPos.top < window.innerHeight / 2 && dragPos.bottom > window.innerHeight / 2) {
+        }else if (dragPos.top < window.innerHeight / 2 && dragPos.bottom > window.innerHeight / 2) {
             setActiveNav("#drag");
         }
     };
@@ -47,12 +52,14 @@ const Header = () => {
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
+        
     }, []);
     
     useTitle({title: activeNav})
 
 
     return(
+        <>
         <header className="headerContainer">
             <a className = "logo" href="#home">
                     <svg width="43" height="87" viewBox="0 0 86 174" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,12 +74,21 @@ const Header = () => {
                 <div className={Toggle ? "navMenu showMenu" : "navMenu"}>
                     <ul className="navList">
                         <li className="navItem">
-                            <a href="#quienes somos" onClick={() => {; updateMenu()}} className={activeNav === "#quienes somos" ? "nav__link active-link" : "nav__link"}>¿Quienes somos?<div></div></a>
+                            <a href="#quienes somos" onClick={() => { updateMenu()}} className={activeNav === "#quienes somos" ? "nav__link active-link" : "nav__link"}>¿Quienes somos?<div></div></a>
                         </li>
-                        <li className="navItem">
-                            <a href="#servicios" onClick={() => {updateMenu()}} className={activeNav === "#servicios" ? "nav__link active-link" : "nav__link"}>Servicios<div></div></a>
+                        <li className="navItem" onClick={() => {updateMenu()}} onMouseEnter={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}>
+                            <a href="#servicios"  className={activeNav === "#servicios" ? "nav__link active-link" : "nav__link"}>
+                                Servicios
+                                <i class="uil uil-angle-down"></i>
+                                <div></div>
+
+                            </a>
+                            <p onClick={() => setOpenPopup(true)} className={Dropdown ? "dropdown" : "dropdownFalse"}>
+                                    Ver todos
+                                </p>
+                            <p onClick={() => setOpenPopup(true)} className="dropMobile">Ver todos</p>
                         </li>
-                        <li className="navItem">
+                        <li className="navItem" >
                             <a href="#profesionales" onClick={() => { updateMenu()}} className={activeNav === "#profesionales" ? "nav__link active-link" : "nav__link"}>Profesionales<div></div></a>
                         </li>
                         <li className="navItem">
@@ -91,7 +107,11 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
+            
+            
         </header>
+        <Popup open={openPopup} onClose={() => setOpenPopup(false)}/>
+        </>
     )
 }
 
