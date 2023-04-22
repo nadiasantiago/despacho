@@ -3,6 +3,7 @@
     padding: 2rem 0 1rem;
     background-color: var(--third);
     color: var(--primary);
+    z-index: 300;
 }
 
 .footerContainer1{
