@@ -40,7 +40,7 @@ const Contacto =()=>{
     }, []);
   
     return (
-        <>
+        <div id="contacto">
             <h2 className="contactoTitle">Contacto</h2>
             <div className="contactoConteiner">
                 <div ref={googleMapRef} className="map" />
@@ -72,7 +72,7 @@ const Contacto =()=>{
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

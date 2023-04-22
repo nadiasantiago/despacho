@@ -7,9 +7,10 @@ import Footer from './components/footer1/Footer';
 import Servicios from './components/servicios/Servicios';
 import Profesionales from './components/profesionales/Profesionales';
 import Contacto from './components/contacto/Contacto';
-
+import { useEffect } from 'react';
 
 function App() {
+  
   return (
     <div className="App">
       <Header />
