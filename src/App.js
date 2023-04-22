@@ -7,6 +7,7 @@ import Footer from './components/footer1/Footer';
 import Servicios from './components/servicios/Servicios';
 import Profesionales from './components/profesionales/Profesionales';
 import Contacto from './components/contacto/Contacto';
+import Consultas from './components/consultas/Consultas';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Servicios />
           <Profesionales/>
           <Contacto />
+          <Consultas/>
           <Drag />
         </>
       </main>

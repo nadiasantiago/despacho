@@ -41,7 +41,7 @@ const Contacto =()=>{
     }, []);
   
     return (
-        <>
+        <div id="contacto">
             <h2 className="contactoTitle">Contacto</h2>
             <div className="contactoConteiner">
                 <div ref={googleMapRef} className="map" />
@@ -56,7 +56,8 @@ const Contacto =()=>{
                     </div>
                     <div className="contactoInfoDetail">
                         <h3>Teléfono</h3>
-                        <p>+34 6776 23910</p>
+                        <p>+34 656239645</p>
+                        <p>+34 677623910</p>
                         <p>+506 22383898</p>
                         <p>+506 88838378</p>
                     </div>
@@ -79,7 +80,7 @@ const Contacto =()=>{
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

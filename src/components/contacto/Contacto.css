@@ -50,6 +50,7 @@
 @media screen and (min-width:788px){
     .contactoTitle{
         font-size: var(--title);
+        margin-bottom: 35px;
     }
     .contactoConteiner{
         flex-direction: row;
@@ -78,5 +79,6 @@
     }
     .redesConteiner svg{
         width: 70px;
+        padding: 20px;
     }
 }
