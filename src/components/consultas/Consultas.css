@@ -1,0 +1,99 @@
+.consultaConteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.consultaTitleConteiner{
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 15px;
+}
+.consultaTitle{
+    font-size: var(--title-mobile);
+    font-weight: 400;
+}
+.consulta-description{
+    font-size: 9px;
+    font-weight: 400;
+    color: var(--primary);
+}
+.consultaForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.consultaForm input{
+    height: 31.96px;
+    width: 100%;
+    margin: 5px;
+    padding: 8px;
+    font-weight: 400;
+    border: 0.63px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 1.2294574975967407px 1.2294574975967407px 0px rgba(0, 0, 0, 0.25);
+}
+.consultaForm textarea{
+    width: 100%;
+    margin: 5px;
+    padding: 8px;
+    font-weight: 400;
+    border: 0.63px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 1.2294574975967407px 1.2294574975967407px 0px rgba(0, 0, 0, 0.25);
+}
+.consultaButton{
+    justify-content: center;
+    font-size: var(--text-mobile);
+    color: var(--background);
+    background-color: #C79B53;
+    border: #C79B53;
+    width: 50%;
+    box-shadow: 0px 2.151550769805908px 2.151550769805908px 0px rgba(0, 0, 0, 0.25);
+    padding: 8px;
+    margin: 5px;
+}
+.consultaButton:hover{
+    background-color: #B47A1A1A;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    cursor: pointer;
+
+}
+.swal2-icon.swal2-success{
+    color: var(--primary);
+}
+
+@media screen and (min-width:788px){
+    .consultaTitleConteiner {
+        margin: 40px;
+    }
+    .consultaTitle{
+        font-size: var(--title);
+    }
+    .consulta-description{
+        font-size: 25px;
+    }
+    .consultaForm{
+        width: 80%;
+    }
+    .consultaForm input{
+        height: 104px;
+        font-size: 30px;
+        padding: 20px;
+        border: 2.04px solid rgba(0, 0, 0, 1);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin: 15px;
+    }
+    .consultaForm textarea{
+        height: 279px;
+        font-size: 30px;
+        padding: 20px;
+        border: 2.04px solid rgba(0, 0, 0, 1);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin: 15px;
+    }
+    .consultaButton{
+        height: 98px;
+        font-size: 30px;
+        box-shadow: 0px 7.000000476837158px 7.000000476837158px 0px rgba(0, 0, 0, 0.25);
+        margin: 15px;
+    }
+}

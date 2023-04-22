@@ -7,6 +7,7 @@ const Contacto =()=>{
     const googleMapRef = useRef(null);
     const marker1Ref = useRef(null);
     const marker2Ref = useRef(null);
+    
     // Load the Google Maps API script
     const script = document.createElement("script");
     script.src = `https://maps.googleapis.com/maps/api/js?key=${mapKey}`;
