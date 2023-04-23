@@ -79,7 +79,7 @@ const Header = () => {
                         <li className="navItem" onClick={() => {updateMenu()}} onMouseEnter={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}>
                             <a href="#servicios"  className={activeNav === "#servicios" ? "nav__link active-link" : "nav__link"}>
                                 Servicios
-                                <i class="uil uil-angle-down"></i>
+                                <i className="uil uil-angle-down"></i>
                                 <div></div>
 
                             </a>

@@ -1,6 +1,5 @@
 import React,{useRef} from 'react';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Consultas.css';
 import Swal from 'sweetalert2';
@@ -23,72 +22,48 @@ const Consultas=()=> {
 
     const sendConsult = async(e) => {
         e.preventDefault();
-        // try {
-            // Swal.fire({
-            //     title: "¡Consulta enviada con éxito!",
-            //     text: `Pronto nos pondremos en contacto`,
-            //     icon: "success",
-            //     showConfirmButton: false,
-            // });
-            // setTimeout(() => {
-            //     Swal.close();
-            // }, 2000);
-
-            toast.success('Consulta enviada con éxito!', {
-                        position: "bottom-right",
-                        autoClose: 1500,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-            })
-        //     emailjs.sendForm('nombre_de_servicio', 'template_key', form.current, 'api_key').then((result) => toast.success('Currículum enviado con éxito!', {
-        //         position: "bottom-right",
-        //         autoClose: 1500,
-        //         hideProgressBar: false,
-        //         closeOnClick: true,
-        //         pauseOnHover: true,
-        //         draggable: true,
-        //         progress: undefined,
-        //         theme: "light",
-        //     })).catch((error) => {
-        //         toast.error(`Algo salio mal ${error}`, {
-        //             position: "bottom-right",
-        //             autoClose: 700,
-        //             hideProgressBar: false,
-        //             closeOnClick: true,
-        //             pauseOnHover: true,
-        //             draggable: true,
-        //             progress: undefined,
-        //             theme: "light",
-        //     })});    
-        // } catch (error) {
-        //     console.log(error)
-        // }
+        try {
+            emailjs.sendForm('nombre_de_servicio', 'template_key', form.current, 'api_key')
+            .then(
+                Swal.fire({
+                title: "¡Consulta enviada con éxito!",
+                text: `Pronto nos pondremos en contacto`,
+                icon: "success",
+                showCloseButton: true,
+                showConfirmButton: false,
+            }),
+            setTimeout(() => {
+            Swal.close();
+            }, 2000)
+            ).catch((error) => {
+                Swal.fire({
+                    icon: 'error',
+                    text: '¡Algo salió mal!',
+                    showCloseButton: true,
+                    showConfirmButton: false,    
+                })})   
+        } catch (error) {
+            console.log(error)
+        }
     e.target.reset();
     }
 
 
-  return (
-    <>
+return (
     <div className='consultaConteiner'>
         <div className='consultaTitleConteiner'>
             <h2 className='consultaTitle'>Dejanos tu consulta</h2>
             <p className='consulta-description'>En breve nos pondremos en contacto contigo</p>
         </div>
         <form className='consultaForm' ref={form} onSubmit={sendConsult}>
-            <label for='nombre'></label>
+            <label htmlFor='nombre'></label>
             <input type="text" id='nombre' name='nombre' placeholder='Ingresa tu nombre' required/>
-            <label for="email"></label>
+            <label htmlFor="email"></label>
             <input type="email" name="email" id="email" placeholder='Email' required/>
             <textarea name="consultas" id="" cols="30" rows="5" placeholder='Escribe tu consulta' required></textarea>
             <button className='consultaButton' type="submit">Enviar</button>
         </form>
     </div>
-    <ToastContainer />
-    </>
   );
 }
 

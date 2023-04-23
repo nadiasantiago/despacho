@@ -52,7 +52,7 @@ const Drag = () => {
     /* Peticion a Email JS api */
     const sendEmail = async (event) => {
         event.preventDefault();
-
+        console.log(files)
         if (!files) {
             toast.error(`Cargue un archivo primero`, {
                 position: "bottom-right",

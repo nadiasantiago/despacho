@@ -1,5 +1,5 @@
 import "./header.css";
-import React, {useEffect, useRef, useState} from 'react'
+import React from 'react'
 
 export const Popup = ({open, onClose}) => {
     
@@ -67,7 +67,7 @@ export const Popup = ({open, onClose}) => {
                 </li>
             </ul>
         </div>
-        <i class="uil uil-times" onClick={onClose}></i>
+        <i className="uil uil-times" onClick={onClose}></i>
     </div>
   )
 }
