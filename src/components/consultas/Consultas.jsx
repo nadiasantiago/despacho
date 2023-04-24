@@ -9,43 +9,56 @@ const Consultas=()=> {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [consult, setConsult ] = useState('');
+    const [consult, setConsult] = useState('');
 
-    const validate=()=>{values => {
-        const errors = {};
-        if (!values.email) {
-            errors.email = 'Required';
+    const validate= (values) => {
+        const error = {};
+        if (!values.email.value) {
+            error.email = 'Required';
         } else if (
-            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email.value)
         ) {
-            errors.email = 'Invalid email address';
+            error.email = 'Correo electrónico invalido';
         }
-        return errors;
-    }}
+        return (        
+            Swal.fire({
+            title: "Error",
+            text: `${error.email}`,
+            icon: "error",
+            showCloseButton: true,
+            showConfirmButton: false,
+            }),
+            setTimeout(() => {
+            Swal.close();
+            }, 2000)
+        )
+    }
 
 
     const sendConsult = async(e) => {
         e.preventDefault();
         try {
-            emailjs.sendForm('nombre_de_servicio', 'template_key', form.current, 'api_key')
-            .then(
-                Swal.fire({
-                title: "¡Consulta enviada con éxito!",
-                text: `Pronto nos pondremos en contacto`,
-                icon: "success",
-                showCloseButton: true,
-                showConfirmButton: false,
-            }),
-            setTimeout(() => {
-            Swal.close();
-            }, 2000)
-            ).catch((error) => {
-                Swal.fire({
-                    icon: 'error',
-                    text: '¡Algo salió mal!',
+            if(!validate(e.target)){
+                emailjs.sendForm('nombre_de_servicio', 'template_key', form.current, 'api_key')
+                .then(
+                    Swal.fire({
+                    title: "¡Consulta enviada con éxito!",
+                    text: `Pronto nos pondremos en contacto`,
+                    icon: "success",
                     showCloseButton: true,
-                    showConfirmButton: false,    
-                })})   
+                    showConfirmButton: false,
+                }),
+                setTimeout(() => {
+                Swal.close();
+                }, 2000)
+                ).catch((error) => {
+                    Swal.fire({
+                        icon: 'error',
+                        text: '¡Algo salió mal!',
+                        showCloseButton: true,
+                        showConfirmButton: false,    
+                    })})       
+            }
         } catch (error) {
             console.log(error)
         }
