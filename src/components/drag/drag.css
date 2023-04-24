@@ -102,11 +102,11 @@
         padding: 1rem;
     }
     .dragContainer h3{
-        font-size: 20px;
+        font-size: var(--title-mobile);
         font-weight: 400;
     }
     .dragContainer p{
-        font-size: 13px;
+        font-size: var(--text-mobile);
     }
     .textMobileDrag{
         display: block;

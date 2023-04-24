@@ -41,6 +41,7 @@ const Drag = () => {
                 progress: undefined,
                 theme: "light",
             })
+            setClass2("drag__area");
             return;
         }
         setFiles([files[0]]);
@@ -147,7 +148,7 @@ const Drag = () => {
                           return;
                         }
                         setFiles([files[0]]);
-                    }} required hidden/>
+                    }} hidden/>
                     
                 </div>
                 <ul className="listFiles">

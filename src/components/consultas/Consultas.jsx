@@ -11,41 +11,28 @@ const Consultas=()=> {
     const [email, setEmail] = useState('');
     const [consult, setConsult] = useState('');
 
-    const validate= (values) => {
-        const error = {};
-        if (!values.email.value) {
-            error.email = 'Required';
-        } else if (
-            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email.value)
-        ) {
-            error.email = 'Correo electrónico invalido';
-        }
-        return errors;
-    }}
-
-
     const sendConsult = async(e) => {
         e.preventDefault();
         try {
-            emailjs.sendForm('service_v837z66', 'template_usnqqml', form.current, 'vSSQ5-PdZnwQ58Aof')
-            .then(
-                Swal.fire({
-                title: "¡Consulta enviada con éxito!",
-                text: `Pronto nos pondremos en contacto`,
-                icon: "success",
-                showCloseButton: true,
-                showConfirmButton: false,
-            }),
-            setTimeout(() => {
-            Swal.close();
-            }, 2000)
-            ).catch((error) => {
-                Swal.fire({
-                    icon: 'error',
-                    text: '¡Algo salió mal!',
+                emailjs.sendForm('service_v837z66', 'template_usnqqml', form.current, 'vSSQ5-PdZnwQ58Aof')
+                .then(
+                    Swal.fire({
+                    title: "¡Consulta enviada con éxito!",
+                    text: `Pronto nos pondremos en contacto`,
+                    icon: "success",
                     showCloseButton: true,
-                    showConfirmButton: false,    
-                })})   
+                    showConfirmButton: false,
+                }),
+                setTimeout(() => {
+                Swal.close();
+                }, 2000)
+                ).catch((error) => {
+                    Swal.fire({
+                        icon: 'error',
+                        text: '¡Algo salió mal!',
+                        showCloseButton: true,
+                        showConfirmButton: false,    
+                    })})
         } catch (error) {
             console.log(error)
         }
@@ -54,7 +41,7 @@ const Consultas=()=> {
 
 
 return (
-    <div className='consultaConteiner'>
+    <div className='consultaConteiner' data-aos="fade-up">
         <div className='consultaTitleConteiner'>
             <h2 className='consultaTitle'>Dejanos tu consulta</h2>
             <p className='consulta-description'>En breve nos pondremos en contacto contigo</p>
