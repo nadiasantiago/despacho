@@ -11,7 +11,7 @@ const Consultas=()=> {
     const [email, setEmail] = useState('');
     const [consult, setConsult ] = useState('');
 
-    const validate=()=>{values => {
+    /*const validate=()=>{values => {
         const errors = {};
         if (!values.email) {
             errors.email = 'Required';
@@ -21,13 +21,13 @@ const Consultas=()=> {
             errors.email = 'Invalid email address';
         }
         return errors;
-    }}
+    }}*/
 
 
     const sendConsult = async(e) => {
         e.preventDefault();
         try {
-            emailjs.sendForm('nombre_de_servicio', 'template_key', form.current, 'api_key')
+            emailjs.sendForm('service_v837z66', 'template_usnqqml', form.current, 'vSSQ5-PdZnwQ58Aof')
             .then(
                 Swal.fire({
                 title: "¡Consulta enviada con éxito!",
@@ -49,7 +49,7 @@ const Consultas=()=> {
         } catch (error) {
             console.log(error)
         }
-    e.target.reset();
+        e.target.reset();
     }
 
 
