@@ -4,7 +4,7 @@ import axios from 'axios';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Swal from 'sweetalert2';
 const Drag = () => {
 
     const form = useRef();
@@ -82,40 +82,30 @@ const Drag = () => {
           setFiles(null);
           
           // y lo envío por mail:
-          emailjs.send('service_v837z66', 'template_bkkbr1h', {file: response.data.link}, "vSSQ5-PdZnwQ58Aof").then((result) => toast.success('Currículum enviado con éxito!', {
-            position: "bottom-right",
-            autoClose: 1500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-        })).catch((error) => {
-            toast.error(`Algo salio mal ${error}`, {
-                position: "bottom-right",
-                autoClose: 700,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
+          emailjs.send('service_v837z66', 'template_bkkbr1h', {file: response.data.link}, "vSSQ5-PdZnwQ58Aof").then((result) => Swal.fire({
+            title: "¡CV enviado con éxito!",
+            text: `Pronto nos pondremos en contacto`,
+            icon: "success",
+            showCloseButton: true,
+            showConfirmButton: false,
+          })
+          ).catch((error) => {
+            Swal.fire({
+                icon: 'error',
+                text: `¡Algo salió mal! ${error}`,
+                showCloseButton: true,
+                showConfirmButton: false,    
             })}) 
 
         } catch (error) {
           console.error(error);
           setLoading(false);
-          toast.error(`Algo salio mal ${error}`, {
-            position: "bottom-right",
-            autoClose: 700,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-        });
+          Swal.fire({
+            icon: 'error',
+            text: `¡Algo salió mal! ${error}`,
+            showCloseButton: true,
+            showConfirmButton: false,    
+          });
         }
       }
     /*---------------*/
