@@ -1,4 +1,4 @@
-import React,{useRef} from 'react';
+import React,{useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import 'react-toastify/dist/ReactToastify.css';
 import './Consultas.css';
@@ -7,17 +7,21 @@ import Swal from 'sweetalert2';
 const Consultas=()=> {
     const form = useRef();
 
-    // const validate=()=>{values => {
-    //     const errors = {};
-    //     if (!values.email) {
-    //         errors.email = 'Required';
-    //     } else if (
-    //         !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-    //     ) {
-    //         errors.email = 'Invalid email address';
-    //     }
-    //     return errors;
-    // }}
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [consult, setConsult ] = useState('');
+
+    const validate=()=>{values => {
+        const errors = {};
+        if (!values.email) {
+            errors.email = 'Required';
+        } else if (
+            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        ) {
+            errors.email = 'Invalid email address';
+        }
+        return errors;
+    }}
 
 
     const sendConsult = async(e) => {
@@ -57,10 +61,10 @@ return (
         </div>
         <form className='consultaForm' ref={form} onSubmit={sendConsult}>
             <label htmlFor='nombre'></label>
-            <input type="text" id='nombre' name='nombre' placeholder='Ingresa tu nombre' required/>
+            <input type="text" id='nombre' name='nombre' placeholder='Ingresa tu nombre' value={name} onChange={(e) => setName(e.target.value)} required/>
             <label htmlFor="email"></label>
-            <input type="email" name="email" id="email" placeholder='Email' required/>
-            <textarea name="consultas" id="" cols="30" rows="5" placeholder='Escribe tu consulta' required></textarea>
+            <input type="email" name="email" id="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
+            <textarea name="consultas" id="" cols="30" rows="5" placeholder='Escribe tu consulta' value={consult} onChange={(e) => setConsult(e.target.value)} required></textarea>
             <button className='consultaButton' type="submit">Enviar</button>
         </form>
     </div>
