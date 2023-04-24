@@ -9,19 +9,19 @@ const Consultas=()=> {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [consult, setConsult ] = useState('');
+    const [consult, setConsult] = useState('');
 
-    /*const validate=()=>{values => {
-        const errors = {};
-        if (!values.email) {
-            errors.email = 'Required';
+    const validate= (values) => {
+        const error = {};
+        if (!values.email.value) {
+            error.email = 'Required';
         } else if (
-            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email.value)
         ) {
-            errors.email = 'Invalid email address';
+            error.email = 'Correo electrónico invalido';
         }
         return errors;
-    }}*/
+    }}
 
 
     const sendConsult = async(e) => {
