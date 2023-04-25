@@ -37,6 +37,9 @@
     background-color: #dbc4a3;
     margin-top: 4px;
 }
+.navItem:nth-child(2):hover a{
+    color: var(--primary);
+}
 .active-link div{
     margin-top: 4px;
     background-color: #B47A1A;
@@ -57,6 +60,7 @@
 .navItem{
     padding: 0.3rem;
 }
+
 .dropdownFalse{
     display: none;
 }
@@ -272,19 +276,25 @@
     top: 0;
     right: 0;
     display: flex;
-    align-items: center;
+    align-self: center;
     margin: 2rem 4rem;
-    border-radius: 1rem;
-    background-color: var(--third);
-    box-shadow: 1px 1px 5px rgb(185, 185, 185);
-    font-size: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 4px #0000003d;
+    color: black;
+    background-color: var(--primary);
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    font-size: 42px;
     cursor: pointer;
     transition: .3s all ease;
     color: white;
 }
 .overlay i:hover{
-    rotate: -20deg;
+    transform: rotate(-90deg);
 }
+
+
 .popupList{
     display: flex;
     flex-direction: row;
@@ -328,12 +338,15 @@
         top: 0;
         right: 0;
         display: flex;
-        align-items: center;
+        align-self: center;
         margin: 1rem 0.5rem;
-        border-radius: 1rem;
-        background-color: var(--third);
-        box-shadow: 2px 2px 2px rgb(185, 185, 185);
-        font-size: 30px;
+        border-radius: 40%;
+        box-shadow: 0px 0px 5px 4px #0000006a;
+        color: black;
+        background-color: var(--primary);
+        width: 40px;
+        height: 37px;
+        font-size: 40px;
         cursor: pointer;
         transition: .3s all ease;
         color: white;
