@@ -37,6 +37,9 @@
     background-color: #dbc4a3;
     margin-top: 4px;
 }
+.navItem:nth-child(2) a{
+    transition: .3s ease;
+}
 .navItem:nth-child(2):hover a{
     color: var(--primary);
 }
@@ -340,13 +343,13 @@
         display: flex;
         align-self: center;
         margin: 1rem 0.5rem;
-        border-radius: 40%;
+        border-radius: 50%;
         box-shadow: 0px 0px 5px 4px #0000006a;
         color: black;
         background-color: var(--primary);
-        width: 40px;
-        height: 37px;
-        font-size: 40px;
+        width: 30px;
+        height: 30px;
+        font-size: 32px;
         cursor: pointer;
         transition: .3s all ease;
         color: white;
