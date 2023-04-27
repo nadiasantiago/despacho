@@ -13,7 +13,7 @@
     font-weight: 400;
 }
 .consulta-description{
-    font-size: 9px;
+    font-size: var(--text-mobile);
     font-weight: 400;
     color: var(--primary);
 }
@@ -43,7 +43,7 @@
     justify-content: center;
     font-size: var(--text-mobile);
     color: var(--background);
-    background-color: #C79B53;
+    background-color: var(--primary);
     border: #C79B53;
     width: 50%;
     box-shadow: 0px 2.151550769805908px 2.151550769805908px 0px rgba(0, 0, 0, 0.25);
@@ -78,10 +78,10 @@
         font-size: 25px;
     }
     .consultaForm{
-        width: 80%;
+        width: 50%;
     }
     .consultaForm input{
-        height: 104px;
+        height: 84px;
         font-size: 30px;
         padding: 20px;
         border: 2.04px solid rgba(0, 0, 0, 1);
@@ -89,7 +89,7 @@
         margin: 15px;
     }
     .consultaForm textarea{
-        height: 279px;
+        height: 200px;
         font-size: 30px;
         padding: 20px;
         border: 2.04px solid rgba(0, 0, 0, 1);
@@ -97,8 +97,9 @@
         margin: 15px;
     }
     .consultaButton{
-        height: 98px;
-        font-size: 30px;
+        height: 78px;
+        width: 30%;
+        font-size: 20px;
         box-shadow: 0px 7.000000476837158px 7.000000476837158px 0px rgba(0, 0, 0, 0.25);
         margin: 15px;
     }

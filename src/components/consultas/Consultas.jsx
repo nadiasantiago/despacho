@@ -5,6 +5,10 @@ import './Consultas.css';
 import Swal from 'sweetalert2';
 
 const Consultas=()=> {
+    const apiKey = process.env.REACT_APP_API_EMAILJS_KEY
+    const serviceKey = process.env.REACT_APP_SERVICE_KEY
+    const templateKeyForm = process.env.REACT_APP_TEMPLATE_FORM_KEY
+
     const form = useRef();
 
     const [name, setName] = useState('');
@@ -14,7 +18,7 @@ const Consultas=()=> {
     const sendConsult = async(e) => {
         e.preventDefault();
         try {
-                emailjs.sendForm('service_v837z66', 'template_usnqqml', form.current, 'vSSQ5-PdZnwQ58Aof')
+                emailjs.sendForm({serviceKey}, {templateKeyForm}, form.current, {apiKey})
                 .then(
                     Swal.fire({
                     title: "¡Consulta enviada con éxito!",

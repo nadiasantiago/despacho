@@ -26,7 +26,7 @@ const Profesionales = () => {
                 <div data-aos="fade-right" data-aos-duration="1350" className="profImg">
                     <img src={prof3} alt="" />
                     <div className="separadorProf"/>
-                    <h4>Martín Jardón Canalías</h4>
+                    <h4 className="martin">Martín Jardón Canalías</h4>
                     <p>Socio oficina España</p>
                 </div>
             </div>

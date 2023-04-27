@@ -120,8 +120,8 @@ const QuienesSom2=()=>{
             
             <div className="visionConteiner">
                 <h2 data-aos="fade-right">Visión</h2>
-                <p data-aos="fade-right">Ser referentes en la prestación de servicios jurídicos, brindando un servicio integral y de excelencia al cliente, adaptándose e innovando para generar nuevas y mejores soluciones a sus problemas. <br></br>
-                Crear un lazo de confianza firme con las personas, haciendo de sus necesidades nuestra principal prioridad.</p>
+                <p data-aos="fade-right">Ser referentes en la prestación de servicios jurídicos, brindando un servicio integral y de excelencia al cliente, adaptándose e innovando para generar nuevas y mejores soluciones a sus problemas.
+                Creando un lazo de confianza firme con las personas, haciendo de sus necesidades nuestra principal prioridad.</p>
             </div>
             <div className="misionConteiner">
                 <h2 data-aos="fade-left">Misión</h2>

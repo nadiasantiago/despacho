@@ -5,7 +5,13 @@ import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
+
+
 const Drag = () => {
+    const apiKey = process.env.REACT_APP_API_EMAILJS_KEY
+    const serviceKey = process.env.REACT_APP_SERVICE_KEY
+    const templateKey = process.env.REACT_APP_TEMPLATE_CV_KEY
+    const fileKey = process.env.REACT_APP_FILE_KEY
 
     const form = useRef();
     const inputRef = useRef()
@@ -75,7 +81,7 @@ const Drag = () => {
         try {
           const response = await axios.post("https://file.io/?expires=1d", formData, {
               headers: {
-                  Authorization: "Bearer <R2SW65R.KTNWQ21-HSW4BZG-MPP3VE8-V3X8QXP>",
+                  Authorization: {fileKey},
               },
           });
           setFileLink(response.data.link); //Recopilo la respuesta de File.io (link de descarga) y lo seteo en un estado
@@ -83,7 +89,7 @@ const Drag = () => {
           setFiles(null);
           
           // y lo envío por mail:
-          emailjs.send('service_v837z66', 'template_bkkbr1h', {file: response.data.link}, "vSSQ5-PdZnwQ58Aof").then((result) => Swal.fire({
+          emailjs.send({serviceKey}, {templateKey}, {file: response.data.link}, {apiKey}).then((result) => Swal.fire({
             title: "¡CV enviado con éxito!",
             text: `Pronto nos pondremos en contacto`,
             icon: "success",

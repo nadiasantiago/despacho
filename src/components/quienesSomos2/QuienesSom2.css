@@ -143,21 +143,27 @@ ul{
         line-height: 37px;
     }
     .valoresConteiner{
-        margin: 152px 0px;
+        margin: 102px 0px;
     }
     .valoresConteiner h2{
         font-size: var(--title);
         line-height: 62px;
     }
     .valoresConteiner h3{
-        font-size: 30px;
+        font-size: 25px;
         line-height: 37px;
     }
+    .valoresItems{
+        width: 75%;
+        margin: 3rem auto;
+        display: flex;
+        justify-content: center;
+    }
     .item{
-        margin: 50px 100px;
+        width: 280px;
     }
     .item svg{
-        height: 180px;
+        height: 140px;
     }
     .item li{
         font-size: 30px;
