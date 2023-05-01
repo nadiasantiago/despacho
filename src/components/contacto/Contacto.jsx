@@ -52,7 +52,7 @@ const Contacto =()=>{
                     </div>
                     <div className="contactoInfoDetail">
                         <h3>Correo electrónico</h3>
-                        <p>correo@correo</p>
+                        <p>consultas@despachosj.com</p>
                     </div>
                     <div className="contactoInfoDetail">
                         <h3>Teléfono</h3>
