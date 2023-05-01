@@ -36,7 +36,9 @@ const Consultas=()=> {
         } catch (error) {
             console.log(error)
         }
-        e.target.reset();
+        setName('');
+        setEmail('');
+        setConsult('');
     }
 
 
