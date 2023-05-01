@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+# Despacho Jurídico S&J | Sitio Web w/ React JS.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Visita la web](https://despachosj.com)
 
-## Available Scripts
+## Resúmen:
 
-In the project directory, you can run:
+Sitio one page componetizado. 
 
-### `npm start`
+El *Header* es un smart component que detecta la posición del scroll. Se implementa un handleScroll que utiliza **getBoundingClientRect().** Esto realiza actualizaciones del nav item activo, como a su vez del document.title con un custom hook. 
+A su vez, en versiones de pantalla reducida, el mismo se compagina en un burger nav customizado. Se implementa un useState del Toggle que setea la clase del Nav con un onClick.
+En Servicios se encuentra un Dropdown manejando con eventos onMouse. Este mismo, al clickearse, dispara un pop up componetizado con funcionalidad modal.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funcionalidad Drag and Drop
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+En vistas de facilitarle al cliente la posibilidad de que los usuarios puedan adjuntar un archivo PDF de su CV y enviarlo, se implementa de la siguiente manera:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ - Al arrastrar y soltar un archivo PDF en la zona definida, se valida si el tipo de archivo es correcto (PDF). Si es así, se envía el archivo a la API de File.io para obtener un enlace de descarga, que luego se envía por correo electrónico utilizando la API de EmailJS. Además, se utiliza la biblioteca Toastify para avisar que se requieren archivos para enviar la petición o bien para cuando se sueltan archivos erróneos. SweetAlert2, a su vez, para mostrar una alerta emergente en caso de éxito o error una vez enviada la petición a las APIS. El código utiliza los estados de React y las referencias para mantener los datos actualizados y manipular el DOM. La función "sendEmail" es asíncrona y utiliza la biblioteca **Axios** para realizar la petición POST a la API de File.io. 
