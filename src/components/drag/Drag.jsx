@@ -15,7 +15,10 @@ const Drag = () => {
     const [class2, setClass2] = useState("drag__area");
     const [fileLink, setFileLink] = useState(null);
     
-    
+    const apiKey = process.env.REACT_APP_API_EMAILJS_KEY
+    const serviceKey = process.env.REACT_APP_SERVICE_KEY
+    const templateKey = process.env.REACT_APP_TEMPLATE_CV_KEY
+    const fileKey = process.env.REACT_APP_FILE_KEY
 
     const handleDragOver = (event) => {
         event.preventDefault();
@@ -76,7 +79,7 @@ const Drag = () => {
         try {
           const response = await axios.post("https://file.io/?expires=1d", formData, {
               headers: {
-                  Authorization: "Bearer <24H4ZJU.PKEE65Y-ASTM5V6-MPX08QV-GPXZBYM>",
+                  Authorization: {fileKey},
               },
           });
           setFileLink(response.data.link); //Recopilo la respuesta de File.io (link de descarga) y lo seteo en un estado
@@ -84,7 +87,7 @@ const Drag = () => {
           setFiles(null);
           
           // y lo envío por mail:
-          emailjs.send("service_4xzlyq1", "template_wgeam8z", {file: response.data.link}, "tPeZCPXrlTLXqNgzh").then((result) => Swal.fire({
+          emailjs.send({serviceKey}, {templateKey}, {file: response.data.link}, {apiKey}).then((result) => Swal.fire({
             title: "¡CV enviado con éxito!",
             text: `Pronto nos pondremos en contacto`,
             icon: "success",
